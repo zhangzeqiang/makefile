@@ -1,0 +1,9 @@
+VPATH = src include ~/source/pkg/boost_1_62_0/
+CPPFLAGS = -I src -I include -lboost_system
+COMPILE = g++
+
+client: ClientMain.cpp
+	$(COMPILE) $< -o $@ $(CPPFLAGS)
+
+server: ServerMain.cpp
+	$(COMPILE) $< -o $@ $(CPPFLAGS)

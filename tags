@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+COMPILE	makefile	/^COMPILE = g++$/;"	m
+CPPFLAGS	makefile	/^CPPFLAGS = -I src$/;"	m
+StudentDB	src/db/StudentDB.cpp	/^StudentDB::StudentDB () {}$/;"	f	class:StudentDB
+StudentDB	src/db/StudentDB.cpp	/^class StudentDB: public VirtualDB {$/;"	c	file:
+VPATH	makefile	/^VPATH = src include ~\/source\/pkg\/boost_1_62_0\/$/;"	m
+VirtualDB	src/db/VirtualDB.cpp	/^        VirtualDB () {}$/;"	f	class:VirtualDB
+VirtualDB	src/db/VirtualDB.cpp	/^class VirtualDB {$/;"	c	file:
+dbName	src/db/VirtualDB.cpp	/^        string dbName;$/;"	m	class:VirtualDB	file:
+dbPasswd	src/db/VirtualDB.cpp	/^        string dbPasswd;$/;"	m	class:VirtualDB	file:
+getDbname	src/db/StudentDB.cpp	/^string StudentDB::getDbname () {$/;"	f	class:StudentDB
+getDbpasswd	src/db/StudentDB.cpp	/^string StudentDB::getDbpasswd () {$/;"	f	class:StudentDB
+main	main.cpp	/^int main () {$/;"	f
+~StudentDB	src/db/StudentDB.cpp	/^StudentDB::~StudentDB () {$/;"	f	class:StudentDB
+~VirtualDB	src/db/VirtualDB.cpp	/^        ~VirtualDB () {}$/;"	f	class:VirtualDB
