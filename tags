@@ -4,17 +4,59 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-COMPILE	makefile	/^COMPILE = g++$/;"	m
-CPPFLAGS	makefile	/^CPPFLAGS = -I src$/;"	m
+AR	src/common.mk	/^AR = ar$/;"	m
+ARFLAGS	src/common.mk	/^ARFLAGS = -crv$/;"	m
+CPPFLAGS	app/app.mk	/^CPPFLAGS = -I ${ROOT}\/include -lboost_system -g$/;"	m
+CPPFLAGS	src/common.mk	/^CPPFLAGS = -I ${ROOT}\/include -lboost_system -g$/;"	m
+CUIClient	include/ui/CUIClient.hpp	/^class CUIClient {$/;"	c	namespace:cli
+CUIClient	src/ui/CUIClient.cpp	/^CUIClient::CUIClient () {$/;"	f	class:cli::CUIClient
+CWINClient	include/ui/CUIClient.hpp	/^class CWINClient {$/;"	c	namespace:cli
+GCC	app/app.mk	/^GCC = g++$/;"	m
+GCC	src/common.mk	/^GCC = g++$/;"	m
+LIB	src/db/Makefile	/^LIB = libdb.a$/;"	m
+LIB	src/net/Makefile	/^LIB = libnet.a$/;"	m
+LIB	src/ui/Makefile	/^LIB = libui.a$/;"	m
+LIBDIR	app/app.mk	/^LIBDIR = ${ROOT}\/lib$/;"	m
+LIBDIR	src/common.mk	/^LIBDIR = ${ROOT}\/lib$/;"	m
+LIBFLAGS	app/app.mk	/^LIBFLAGS = -L ${LIBDIR}$/;"	m
+LIBLINK	app/client/Makefile	/^LIBLINK = -lui$/;"	m
+LIBLINK	app/server/Makefile	/^LIBLINK = $/;"	m
+OBJS	app/app.mk	/^OBJS = $(patsubst %.cpp,%,$(SOURCE))$/;"	m
+OBJS	src/common.mk	/^OBJS = $(patsubst %.cpp,%.o,$(SOURCE))$/;"	m
+ROOT	app/app.mk	/^ROOT = \/home\/git\/source\/pro\/server$/;"	m
+ROOT	src/common.mk	/^ROOT = \/home\/git\/source\/pro\/server$/;"	m
+SOURCE	app/app.mk	/^SOURCE = $(wildcard *.cpp)$/;"	m
+SOURCE	src/common.mk	/^SOURCE = $(wildcard *.cpp)$/;"	m
 StudentDB	src/db/StudentDB.cpp	/^StudentDB::StudentDB () {}$/;"	f	class:StudentDB
 StudentDB	src/db/StudentDB.cpp	/^class StudentDB: public VirtualDB {$/;"	c	file:
-VPATH	makefile	/^VPATH = src include ~\/source\/pkg\/boost_1_62_0\/$/;"	m
+VPATH	app/app.mk	/^VPATH = ${ROOT}\/include ~\/source\/pkg\/boost_1_62_0\/$/;"	m
+VPATH	src/common.mk	/^VPATH = ${ROOT}\/include ~\/source\/pkg\/boost_1_62_0\/$/;"	m
 VirtualDB	src/db/VirtualDB.cpp	/^        VirtualDB () {}$/;"	f	class:VirtualDB
 VirtualDB	src/db/VirtualDB.cpp	/^class VirtualDB {$/;"	c	file:
+VirtualNet	src/net/VirtualNet.cpp	/^    VirtualNet (io_service &iosev)  {}$/;"	f	class:VirtualNet	file:
+VirtualNet	src/net/VirtualNet.cpp	/^class VirtualNet {$/;"	c	file:
+_create	src/ui/CUIClient.cpp	/^void CUIClient::_create () {$/;"	f	class:cli::CUIClient
+_destroy	src/ui/CUIClient.cpp	/^void CUIClient::_destroy () {$/;"	f	class:cli::CUIClient
+cWin	include/ui/CUIClient.hpp	/^        shared_ptr<CWINClient> cWin;$/;"	m	class:cli::CUIClient
+cli	include/ui/CUIClient.hpp	/^namespace cli {$/;"	n
+cli	src/ui/CUIClient.cpp	/^namespace cli {$/;"	n	file:
+cmdWin	src/ui/CUIClient.cpp	/^string CWINClient::cmdWin () {$/;"	f	class:cli::CWINClient
+createWin	src/ui/CUIClient.cpp	/^void CWINClient::createWin () {$/;"	f	class:cli::CWINClient
 dbName	src/db/VirtualDB.cpp	/^        string dbName;$/;"	m	class:VirtualDB	file:
 dbPasswd	src/db/VirtualDB.cpp	/^        string dbPasswd;$/;"	m	class:VirtualDB	file:
+destroyWin	src/ui/CUIClient.cpp	/^void CWINClient::destroyWin () {$/;"	f	class:cli::CWINClient
 getDbname	src/db/StudentDB.cpp	/^string StudentDB::getDbname () {$/;"	f	class:StudentDB
 getDbpasswd	src/db/StudentDB.cpp	/^string StudentDB::getDbpasswd () {$/;"	f	class:StudentDB
-main	main.cpp	/^int main () {$/;"	f
+input	src/ui/CUIClient.cpp	/^string CWINClient::input () {$/;"	f	class:cli::CWINClient
+main	app/client/ClientMain.cpp	/^int main () {$/;"	f
+main	app/server/ServerMain.cpp	/^int main () {$/;"	f
+make_daytime_string	app/server/ServerMain.cpp	/^string make_daytime_string () {$/;"	f
+module	Makefile	/^module := src app $/;"	m
+module	app/Makefile	/^module := client server $/;"	m
+module	src/Makefile	/^module := db net ui$/;"	m
+start	src/ui/CUIClient.cpp	/^void CUIClient::start() {$/;"	f	class:cli::CUIClient
+translateCmd	src/ui/CUIClient.cpp	/^void CWINClient::translateCmd () {$/;"	f	class:cli::CWINClient
+username	include/ui/CUIClient.hpp	/^        string username;$/;"	m	class:cli::CUIClient
+~CUIClient	include/ui/CUIClient.hpp	/^        ~CUIClient () {}$/;"	f	class:cli::CUIClient
 ~StudentDB	src/db/StudentDB.cpp	/^StudentDB::~StudentDB () {$/;"	f	class:StudentDB
 ~VirtualDB	src/db/VirtualDB.cpp	/^        ~VirtualDB () {}$/;"	f	class:VirtualDB
